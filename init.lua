@@ -1,0 +1,25 @@
+-- Basic config 
+require("core.mappings")
+require("core.plugins")
+require("core.colors")
+require("core.configs")
+
+-- Plugins config
+require("plugins.neo-tree")
+require("plugins.treesitter")
+require("plugins.lsp")
+require("plugins.cmp")
+require("plugins.mason")
+require("plugins.telescope")
+require("plugins.toggleterm")
+require("plugins.lualine")
+require("plugins.catppuccin")
+require("plugins.dashboard")
+require("plugins.buffline")
+require("plugins.dap")
+require("plugins.autopairs")
+require("plugins.gitsigns")
+require("plugins.whichkey")
+require("plugins.DBUI")
+--require("plugins.copilot")
+
