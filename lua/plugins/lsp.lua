@@ -47,6 +47,20 @@ lspconfig.bashls.setup {}
 lspconfig.marksman.setup {}
 lspconfig.ts_ls.setup {}
 
+vim.diagnostic.config({
+  virtual_text = true, -- Оставляет короткий текст рядом с ошибкой
+  signs = true,        -- Показывает значки в gutter
+  update_in_insert = false, -- Не обновлять диагностики в режиме вставки
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "single",
+    source = true,
+    header = "",
+    prefix = "",
+  },
+})
+
 -- Mappings
 local opts = { noremap=true, silent=true }
 
@@ -58,3 +72,13 @@ local function quickfix()
 end
 
 vim.keymap.set('n', '<leader>qf', quickfix, opts)
+
+
+
+-- Убедитесь, что у вас есть это для отображения при наведении:
+-- Если у вас нет маппинга для 'K' (или другой клавиши) для показа документации/диагностики
+-- Добавьте что-то вроде этого в вашем конфиге:
+-- vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = 0 })
+-- Или для более специфичного отображения диагностики:
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+

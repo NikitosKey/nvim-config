@@ -21,5 +21,6 @@ require("plugins.autopairs")
 require("plugins.gitsigns")
 require("plugins.whichkey")
 require("plugins.DBUI")
---require("plugins.copilot")
+require("plugins.copilot")
+-- require("plugins.markdown-preview")
 
